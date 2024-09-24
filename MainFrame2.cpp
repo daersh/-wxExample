@@ -29,6 +29,8 @@ MainFrame2::MainFrame2(const wxString &title) : wxFrame(nullptr, wxID_ANY, title
         wxPoint(300,200), wxSize(200,-1));
     wxTextCtrl* text = new wxTextCtrl(panel, TEXT_ID,"",
         wxPoint(300,375),wxSize(200,-1));
+    wxButton* button2 = new wxButton(panel, BUTTON_ID, wxT("Button2"),wxPoint(300,500),wxSize(200,-1));
+    // 하단 상태창 생성
     CreateStatusBar();
 }
 
@@ -44,5 +46,10 @@ void MainFrame2::OnSliderClicked(wxCommandEvent &event) {
 
 void MainFrame2::OnTextClicked(wxCommandEvent &event) {
     wxString str = wxString::Format("Text Value: %s", event.GetString());
+    wxLogStatus(str);
+}
+
+void MainFrame2::OnButtonClicked2(wxCommandEvent &event) {
+    wxString str = wxString::Format("Button2 Clicked!!");
     wxLogStatus(str);
 }

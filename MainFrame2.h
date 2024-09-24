@@ -16,6 +16,7 @@ private:
     void OnButtonClicked(wxCommandEvent& event);
     void OnSliderClicked(wxCommandEvent& event);
     void OnTextClicked(wxCommandEvent& event);
+    void OnButtonClicked2(wxCommandEvent& event);
     wxDECLARE_EVENT_TABLE();
 };
 
