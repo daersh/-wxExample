@@ -13,6 +13,9 @@ add_executable(wxWidgetExample
         App.cpp
         App.h
         MainFrame2.cpp
-        MainFrame2.h)
+        MainFrame2.h
+        MainFrame3.cpp
+        MainFrame3.h
+)
 
 target_link_libraries(wxWidgetExample ${wxWidgets_LIBRARIES})

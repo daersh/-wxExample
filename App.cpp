@@ -6,15 +6,15 @@
 #include <wx/wx.h>
 
 // #include "MainFrame.h"
-#include "MainFrame2.h"
-
+// #include "MainFrame2.h"
+#include "MainFrame3.h"
 
 wxIMPLEMENT_APP(App);
 
 bool App::OnInit() {
     // 메인 화면 객체 불러오기
     // MainFrame* main_frame = new MainFrame("C++ GUI");
-    MainFrame2* main_frame = new MainFrame2("C++ GUI_2");
+    MainFrame3* main_frame = new MainFrame3("C++ GUI_2");
 
     // 화면 크기 지정
     main_frame->SetClientSize(wxSize(800, 800));

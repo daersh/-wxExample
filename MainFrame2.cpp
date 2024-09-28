@@ -22,7 +22,6 @@ wxEND_EVENT_TABLE()
 MainFrame2::MainFrame2(const wxString &title) : wxFrame(nullptr, wxID_ANY, title) {
     // 생성자
     wxPanel* panel = new wxPanel(this);
-
     wxButton* button = new wxButton(panel, BUTTON_ID, wxT("Button")
         , wxPoint(300, 275), wxSize(200, 50));
     wxSlider* slider = new wxSlider(panel, SLIDER_ID, 0,0,100,
