@@ -23,6 +23,9 @@ MainFrame3::MainFrame3(const wxString &title) : wxFrame(nullptr, wxID_ANY, title
     slider -> Bind(wxEVT_SLIDER, &MainFrame3::OnSliderClicked, this);
     text -> Bind(wxEVT_TEXT, &MainFrame3::OnTextClicked,this);
 
+    // Unbind 시키면 버튼을 눌러드 이벤트 발생 안한다.
+    button -> Unbind(wxEVT_BUTTON, &MainFrame3::OnButtonClicked,this);
+
     // 하단 상태창 생성
     CreateStatusBar();
 }
