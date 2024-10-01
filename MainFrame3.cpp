@@ -19,9 +19,13 @@ MainFrame3::MainFrame3(const wxString &title) : wxFrame(nullptr, wxID_ANY, title
         wxPoint(300,375),wxSize(200,-1));
 
     // 바인딩을 통해 간단하게 할 수 있다.
-    button -> Bind(wxEVT_BUTTON, &MainFrame3::OnButtonClicked, this);
+    // button -> Bind(wxEVT_BUTTON, &MainFrame3::OnButtonClicked, this);
     slider -> Bind(wxEVT_SLIDER, &MainFrame3::OnSliderClicked, this);
     text -> Bind(wxEVT_TEXT, &MainFrame3::OnTextClicked,this);
+
+    // 패널이나 해당 객체를 바인딩하여 클릭 이벤트가 번식? 될 수 있다.
+    // panel->Bind(wxEVT_BUTTON, &MainFrame3::OnButtonClicked, this);
+    // this-> Bind(wxEVT_BUTTON, &MainFrame3::OnButtonClicked, this);
 
     // Unbind 시키면 버튼을 눌러드 이벤트 발생 안한다.
     button -> Unbind(wxEVT_BUTTON, &MainFrame3::OnButtonClicked,this);
